@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+
+main {
+  background-color: #ecf0f1;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+.title{
+  height: 100%;
+  width: 35%;
+  position: relative;
+}
+.cards-container{
+  height: 100%;
+  overflow: hidden;
+}
+.cardTitle{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.cardTitle h1{
+  font-size: 2.7rem;
+  font-weight: 500;
+  margin-block:1.5rem;
+}
+.subtitle{
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.image{
+  height: 100%;
+  width: 65%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-slider{
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+.slider img{
+  object-fit: cover;
+  height: 100vh;
+}
+
+.arrow{
+  background-color: #ecf0f1;
+  position: absolute;
+  height: 45px;
+  aspect-ratio: 1/1;
+  right: 0;
+  top: 50%;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  color: #95a5a6;
+  transition: color 0.2s linear;
+  z-index: 99;
+}
+.up{
+  left: 0;
+  top: 50%;
+  border-radius: 0px 10px 10px 0px;
+  transform: translateY(-100%);
+}
+.arrow:hover{
+  color: black;
+}
+
+.cards-slider{
+  height: 800%;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-87.5%);
+}
+.slider{
+  height: 800%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  /* transform: translateY(-12.5%); */
+}
+
+/* cards */
+.card1{
+  background-color: #3498db;
+}
+.card2{
+  background-color: #e74c3c;
+}
+.card3{
+  background-color: #e67e22;
+}
+.card4{
+  background-color: #27ae60;
+}
+.card5{
+  background-color: #c0392b;
+}
+.card6{
+  background-color: #f39c12;
+}
+.card7{
+  background-color: #16a085;
+}
+.card8{
+  background-color: #8e44ad;
+}
+
+
+@media screen and (max-width:800px){
+  main{
+    flex-direction: column;
+  }
+  .title{
+    width: 100%;
+    height: 35%;
+
+  }
+  .image{
+    width: 100%;
+    height: 65%;
+  }
+  .cards-slider{
+    transform: translateX(-87.5%);
+    height: 100%;
+    width: 800%;
+    display: flex;
+  }
+  .cardTitle{
+    width: 100vw;
+    height: 100%;
+  }
+  
+  .slider{
+    width: 800%;
+    height: 100%;
+    flex-direction: row;
+    align-items: start;
+  }
+  .slider img{
+    height: 100%;
+    width: 100vw;
+  }
+  
+  .up{
+    top: 0;
+    right: 50%;
+    left: auto;
+    transform: rotate(-90deg);
+    border-radius: 10px 0px 0px 10px;
+  }
+  .down{
+    border-radius: 0px 10px 10px 0px;
+    top: auto;
+    left: 50%;
+    bottom: 0;
+    transform: rotate(-90deg);
+  }
+}
